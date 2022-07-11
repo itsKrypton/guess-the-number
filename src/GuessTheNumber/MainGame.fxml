@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.HPos?>
+
+<!-- <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuessTheNumber.GameController">
+   <children>
+      <Label layoutX="200.0" layoutY="28.0" text="Start Guessing!">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="hintMessages" layoutX="129.0" layoutY="112.0" text="">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inputNumber" layoutX="188.0" layoutY="172.0" onKeyReleased="#handleKeyReleased">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="guessButton" layoutX="270.0" layoutY="221.0" mnemonicParsing="false" text="Guess" onAction="#checkNumber">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="playAgain" layoutX="255.0" layoutY="261.0" mnemonicParsing="false" text="Play Again" onAction="#resetGame">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane> -->
+
+<BorderPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuessTheNumber.GameController" stylesheets="@styles.css">
+   <top>
+      <Label text="Start Guessing!" BorderPane.alignment="center">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <GridPane alignment="top_center" hgap="10" vgap="5">
+         <Label fx:id="hintMessages" text="" GridPane.rowIndex="0" GridPane.columnIndex="0" BorderPane.alignment="center">
+            <font>
+               <Font name="System Bold" size="15.0" />
+            </font>
+            <padding>
+               <Insets top="50"/>
+            </padding>
+         </Label>
+         <TextField fx:id="inputNumber" GridPane.rowIndex="1" GridPane.columnIndex="0" onKeyReleased="#handleKeyReleased" GridPane.halignment="center" prefWidth="350">
+            <font>
+               <Font name="System" size="18.0" />
+            </font>
+         </TextField>
+         <Button fx:id="guessButton" GridPane.rowIndex="2" GridPane.columnIndex="0" text="Guess" onAction="#checkNumber" GridPane.halignment="center">
+            <font>
+               <Font name="System Bold" size="15.0" />
+            </font>
+         </Button>
+         <Button fx:id="playAgain" GridPane.rowIndex="3" GridPane.columnIndex="0" text="Play Again" onAction="#resetGame" GridPane.halignment="center">
+            <font>
+               <Font name="System Bold" size="15.0" />
+            </font>
+         </Button>
+      </GridPane>
+   </center>
+</BorderPane>
